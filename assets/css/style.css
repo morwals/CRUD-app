@@ -1,0 +1,85 @@
+
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+nav{
+    background-color: rgb(87, 255, 137);
+    height: 30px;
+    padding: 2px;
+    text-align: center;
+}
+
+.nav-a{
+    font-size: 23px;
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+}
+
+.a-tag{
+    margin: 8px 5px;
+    width: fit-content;
+    background-color: white;
+    padding: 3px;
+    box-shadow: 4px 5px 13px -2px rgba(0,0,0,0.4);
+}
+
+.container{
+    width: fit-content;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 2px solid black;
+}
+
+table{
+    border-spacing:0;
+    width:100%;
+}
+
+.thead{
+    color: whitesmoke;
+    background-color: rgb(19, 19, 22);
+}
+
+.table td,table th{
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.edit{
+    box-shadow: 4px 5px 13px -2px rgba(0,0,0,0.4);
+}
+
+.delete{
+    margin-left: 5px;
+    box-shadow: 4px 5px 13px -2px rgba(0,0,0,0.4);
+}
+
+.inline{
+    display: inline;
+}
+
+.form-group{
+    margin: 3px;
+}
+
+.form-group input[type="text"]{
+    width: 9    0%;
+    padding: 1em 1em;
+    border: 1px solid black;
+}
+
+.btn{
+    background-color: skyblue;
+    margin: 10px 5px ;
+}

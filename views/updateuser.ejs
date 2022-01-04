@@ -1,0 +1,60 @@
+<%-include("include/_header")%>
+
+<main id="mian">
+    <div class="container">
+        <div class="a-tag">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All Users</a>
+            </div>
+        </div>
+        
+
+        <h2>Update User</h2>   
+
+        <form method="post" id="update-user">
+           <div class="new-user">
+               <div class="form-group">
+                   <label for="name" class="text-light">Name</label>
+                   <input type="hidden" name="id" value="<%= user._id %>">
+                   <input type="text" name="name" value="<%= user.name %>" placeholder="Full Name">
+               </div>
+               <div class="form-group">
+                <label for="Email" class="text-light">Email</label>
+                <input type="text" name="email" value="<%= user.email %>" placeholder="Example@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="geneder" class="text-light">Geneder</label>
+                <div class="inline">
+                    <input type="radio" name="gender" value="Male" <%= user.gender=='Male'? 'checked' : '' %> >
+                    <label for="geneder" class="text-light">Male</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" name="gender" value="Female" <%= user.gender=='Female'? 'checked' : '' %>>
+                    <label for="geneder" class="text-light">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="status" class="text-light">Status</label>
+                <div class="inline">
+                    <input type="radio" name="status" value="Active" <%= user.status =='Active'? 'checked' : '' %>>
+                    <label for="status" class="text-light">Active</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" name="status" value="Inactive" <%= user.status =='Inactive'? 'checked' : '' %>>
+                    <label for="status" class="text-light">Inactive</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Save</button>
+            </div>
+
+           </div>
+        </form>
+    </div>
+
+
+</main>
+
+
+<%-include("include/_footer")%>

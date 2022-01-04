@@ -1,0 +1,44 @@
+<%-include("include/_header")%>
+
+<main id="mian">
+    <div class="container">
+        <div class="a-tag">
+            <a href="/add-user"><span>New User<i class="fas fa-user"></i></span></a>
+        </div>
+    
+        <form action="/" method="post">
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>@Email</td>
+                        <td>Geneder</td>
+                        <td>Status</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for(var i=0;i<users.length;i++){%>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= users[i].name %></td>
+                        <td><%= users[i].email %></td>
+                        <td><%= users[i].gender %></td>
+                        <td><%= users[i].status %></td>
+                        <td>
+                            <a href="/update-user?id=<%=users[i]._id%>" class="edit"><i class="fas fa-pencil-alt"></i></a>
+                            <a data-id="<%=users[i]._id%>" class="delete"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                        </tr>
+                        <%}%>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+
+</main>
+
+<%-include("include/_footer")%>
